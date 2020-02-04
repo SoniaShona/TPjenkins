@@ -6,7 +6,7 @@ pipeline {
         powershell 'gradle build'
         powershell 'gradle javadoc'
         archiveArtifacts 'build/libs/**.jar'
-        archiveArtifacts 'build/reports/'
+        archiveArtifacts 'build/reports/tests/test/*'
       }
     }
 
