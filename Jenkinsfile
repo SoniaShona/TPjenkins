@@ -16,5 +16,11 @@ pipeline {
       }
     }
 
+    stage('Code Analysis') {
+      steps {
+        jacoco(execPattern: 'build/jacoco/*.exec', exclusionPattern: '**/test/*.class')
+      }
+    }
+
   }
 }
