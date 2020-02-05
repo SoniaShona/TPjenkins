@@ -38,9 +38,6 @@ pipeline {
     }
 
     stage('Deployment') {
-      when {
-        branch 'master'
-      }
       steps {
         bat 'gradle publish'
       }
