@@ -38,7 +38,9 @@ pipeline {
     }
 
     stage('Deployment') {
-      
+      when {
+        branch 'master'
+      }
       steps {
         powershell 'gradle publishing'
       }
