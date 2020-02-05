@@ -39,7 +39,7 @@ pipeline {
 
     stage('Deployment') {
       steps {
-        powershell(script: 'gradle publishing', encoding: 'xx')
+        powershell 'gradle publishing'
       }
     }
 
