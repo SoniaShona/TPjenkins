@@ -37,5 +37,11 @@ pipeline {
       }
     }
 
+    stage('Deployment') {
+      steps {
+        powershell 'gradle publishing'
+      }
+    }
+
   }
 }
