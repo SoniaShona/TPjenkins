@@ -38,14 +38,20 @@ pipeline {
     }
 
     stage('Deployment') {
+      when {
+        expression { env.CHANGE_ID == null}
+      }
       steps {
-        echo 'Deply� avec succes'
+        echo 'Deplyé avec succes'
       }
     }
 
     stage('Slack Notification') {
+      when {
+        expression { env.CHANGE_ID == null}
+      }
       steps {
-        slackSend(token: 'TTJA9NG6Q/BTK232E9E/AK7PCjP9dzFsVilLNFUoq9VJ', baseUrl: 'https://hooks.slack.com/services/', teamDomain: 'tp8outils', channel: '#jenkins', sendAsText: true, message: 'Déployé avec succès')
+        slackSend(token: 'TTJA9NG6Q/BTK232E9E/AK7PCjP9dzFsVilLNFUoq9VJ', baseUrl: 'https://hooks.slack.com/services/', teamDomain: 'tp8outils', channel: '#jenkins', sendAsText: true, message: 'DÃ©ployÃ© avec succÃ¨s')
       }
     }
 
