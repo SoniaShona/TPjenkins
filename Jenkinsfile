@@ -43,7 +43,7 @@ pipeline {
       }
       steps {
         echo 'cool'
-        powershell 'gradle publishing'
+        bat 'gradle publishing'
       }
     }
 
