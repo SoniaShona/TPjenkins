@@ -43,7 +43,6 @@ pipeline {
       }
       steps {
         echo 'cool'
-        bat 'gradle publishing'
       }
     }
 
