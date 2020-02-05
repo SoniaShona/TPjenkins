@@ -42,7 +42,6 @@ pipeline {
         branch 'master'
       }
       steps {
-        echo 'cool'
         bat 'gradle publish'
       }
     }
