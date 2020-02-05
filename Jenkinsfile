@@ -42,7 +42,7 @@ pipeline {
         branch 'master'
       }
       steps {
-        powershell 'gradle publishing'
+        echo 'cool'
       }
     }
 
