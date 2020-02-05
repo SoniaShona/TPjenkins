@@ -38,6 +38,12 @@ pipeline {
     }
 
     stage('Deployment') {
+      agent {
+        node {
+          label 'master'
+        }
+
+      }
       steps {
         powershell 'gradle publishing'
       }
