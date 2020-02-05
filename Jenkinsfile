@@ -12,8 +12,7 @@ pipeline {
 
     stage('Mail Notification') {
       steps {
-        emailext(subject: 'Build Result TP8', body: 'build done', from: 'jenkins-notification@jenkins.com', to: 'gs_reffad@esi.dz')
-        mail(subject: 'build', body: 'succes du build', from: 'jenkins-notification@jenkins.com', to: 'gs_reffad@esi.dz')
+        mail(subject: 'build', body: 'succes du build', to: 'gs_reffad@esi.dz')
       }
     }
 
