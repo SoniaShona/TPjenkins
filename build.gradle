@@ -31,10 +31,10 @@ jacocoTestCoverageVerification {
 publishing {
     repositories {
         maven {
-            url 'https://mymavenrepo.com/repo/EWXL1sR2nwH6xz8ZHCHj/'
+            url 'https://mymavenrepo.com/repo/D6f5nRLjLyO3mpVgnqSM/'
             credentials {
                 username 'myMavenRepo'
-                password '00000000'
+                password 'azer123'
             }
         }
     }
