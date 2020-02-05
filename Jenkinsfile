@@ -48,7 +48,7 @@ pipeline {
 
     stage('Slack Notification') {
       steps {
-        slackSend(token: 'TTJA9NG6Q/BTK232E9E/AK7PCjP9dzFsVilLNFUoq9VJ', baseUrl: 'https://hooks.slack.com/services/', teamDomain: 'tp8outils')
+        slackSend(token: 'TTJA9NG6Q/BTK232E9E/AK7PCjP9dzFsVilLNFUoq9VJ', baseUrl: 'https://hooks.slack.com/services/', teamDomain: 'tp8outils', channel: '#jenkins', sendAsText: true, message: 'Déployé avec succès')
       }
     }
 
